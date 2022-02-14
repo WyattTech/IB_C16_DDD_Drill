@@ -39,21 +39,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
       //Create Even and Odd functions
      newDiv.addEventListener("dblclick", function(){
-        if (this.id % 2 == 0 & this.nextSibling === null) {
+        if (newDiv.id % 2 == 0 & newDiv.nextSibling === null) {
             alert("No square after me to delete!")
         }
-        else if (this.id % 2 == 0) {
-            this.nextSibling.remove();
+        else if (newDiv.id % 2 == 0) {
+            newDiv.nextSibling.remove();
+            
         }
+        alert("There is not sibling!");
      })
 
      newDiv.addEventListener("dblclick", function(){
-         if (this.id % 2 !== 0 & this.previousSibling === null) {
+         if (newDiv.id % 2 !== 0 & newDiv.previousSibling === null) {
              alert("No square before me to delete!");
-         } else if ( this.id % 2 !== 0) {
-             this.previousSibling.remove();
+             
+         } else if (newDiv.id % 2 !== 0) {
+             newDiv.previousSibling.remove();
+            
          }
-        
+         alert("There's not previousSibling!");
      });
 
     }); 
